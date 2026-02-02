@@ -1,0 +1,91 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: $defaultFont;
+  font-weight: $regularWeight;
+  color: $fontColor;
+  background-color: $primaryColor;
+}
+
+#headerWrapper {
+  background-color: $secondaryColor;
+}
+
+header {
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem $gutter;
+  gap: 10px;
+  h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: $regularWeight;
+    color: $fontColor;
+  }
+}
+
+#navWrapper {
+  background-color: $primaryColor;
+}
+
+nav {
+  ul {
+    list-style-type: none;
+    padding: 0 $gutter;
+    margin: 0;
+    display: flex;
+    li {
+      flex: 1;
+      border-bottom: 2px #424242 solid;
+    }
+  }
+  li.active {
+    background-color: $secondaryColor;
+    border-top: 2px #424242 solid;
+    border-bottom: 2px white solid;
+  }
+  a {
+    display: block;
+    padding: 0.75rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+      color: #ff9100;
+    }
+  }
+}
+
+#mainWrapper {
+    h1 {
+        padding: 0 $gutter;
+    }
+}
+
+
+#footerWrapper {
+    background-color: $secondaryColor;
+}
+
+footer {
+    padding: .5rem $gutter;
+    p {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+    }
+}
